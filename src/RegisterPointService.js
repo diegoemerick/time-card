@@ -39,6 +39,10 @@ class RegisterPoinService {
             await page.waitForSelector('button[ng-click="save()"]', { visible: true })
             await page.click('button[ng-click="save()"]');
 
+            // click ok button
+            await page.waitForSelector('button[ng-click="button.action()"]', { visible: true })
+            await page.click('button[ng-click="button.action()"]');
+
             // screenshoot
             await page.goto(process.env.LIST_PAGE, { waitUntil: 'networkidle0' });
             await page.waitForSelector(".table", { visible: true });
