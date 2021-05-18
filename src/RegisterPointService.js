@@ -19,8 +19,8 @@ class RegisterPoinService {
                         cb({
                             'coords': {
                                 accuracy: 21,
-                                latitude: -19.948175394650995, // define your location
-                                longitude: -43.94276098871361, // define your location
+                                latitude: process.env.LATITUDE,
+                                longitude: process.env.LONGITUDE,
                             }
                         })
                     }, 1000)
